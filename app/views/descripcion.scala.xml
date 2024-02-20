@@ -1,0 +1,8 @@
+@(id: Long, descripcionTexto: String)
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+
+<descripcion>
+    <id>@id</id>
+    <descripcionTexto>@descripcionTexto</descripcionTexto>
+</descripcion>

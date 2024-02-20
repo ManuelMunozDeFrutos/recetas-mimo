@@ -1,0 +1,12 @@
+@(id: Long, name: String, categoria: String, dificultad: String, descripcion: String, comentario: String)
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+
+<receta>
+    <id>@id</id>
+    <name>@name</name>
+    <categoria>@categoria</categoria>
+    <descripcion>@dificultad</descripcion>
+    <dificultad>@descripcion</dificultad>
+    <comentario>@comentario</comentario>
+</receta>

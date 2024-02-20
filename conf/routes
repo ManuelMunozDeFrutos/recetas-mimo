@@ -1,0 +1,132 @@
+#============================================================#
+#                       RECETAS-MIMO                         #
+#                   MANUEL MUÑOZ DE FRUTOS                   #
+#                                                            #
+#               TECNOLOGIAS DEL LADO DEL SERVIDOR            #
+#               CLOUD COMPUTING - SERVICIOS REST             #
+#============================================================#
+
+#--------------------------------#
+#           APARTADO 1           #
+#       GESTION DE RECETAS       #
+#--------------------------------#
+
+#--------------------------------#
+#       METODOS GET RECETAS      #
+#--------------------------------#
+
+# ------ GET RECETAS                ------
+
+GET     /recetas      controllers.RecetasIngredientesController.getRecetas(request: Request)
+
+# ------ GET RECETA POR ID          ------
+
+GET     /receta/:recetaId    controllers.RecetasIngredientesController.getRecetaId(request: Request, recetaId: Long)
+
+# ------ GET RECETA POR NOMBRE      ------
+
+GET     /receta/name/:recetaName    controllers.RecetasIngredientesController.getRecetaName(request: Request, recetaName: String)
+
+# ------ GET RECETA POR CATEGORIA   ------
+
+GET     /receta/category/:recetaCategory    controllers.RecetasIngredientesController.getRecetaCategory(request: Request, recetaCategory: String)
+
+#--------------------------------#
+#       METODOS POST RECETAS     #
+#--------------------------------#
+
+# ------ POST CREAR RECETA          ------
+
+POST    /recetas   controllers.RecetasIngredientesController.createReceta(request: Request)
+
+#--------------------------------#
+#       METODOS PUT RECETAS      #
+#--------------------------------#
+
+# ------ PUT ACTUALIZAR RECETA      ------
+
+PUT     /receta/:recetaId    controllers.RecetasIngredientesController.updateReceta(request: Request, recetaId: Long)
+
+#--------------------------------#
+#       METODOS DELETE RECETAS   #
+#--------------------------------#
+
+# ------ DELETE ELIMINAR RECETA     ------
+
+DELETE     /receta/:recetaId    controllers.RecetasIngredientesController.deleteReceta(recetaId: Long)
+
+
+#============================================================
+#============================================================
+
+#------------------------------------#
+#            APARTADO 2              #
+#       GESTION DE INGREDIENTES      #
+#------------------------------------#
+
+#------------------------------------#
+#       METODOS GET INGREDIENTES     #
+#------------------------------------#
+
+# ------ GET INGREDIENTES                ------
+
+GET     /ingredientes      controllers.RecetasIngredientesController.getIngredientes(request: Request)
+
+# ------ GET INGREDIENTE POR ID          ------
+
+GET     /ingrediente/:ingredienteId    controllers.RecetasIngredientesController.getIngredienteID(request: Request, ingredienteId: Long)
+
+# ------ GET INGREDIENTE POR NOMBRE      ------
+
+GET     /ingrediente/name/:ingredienteName  controllers.RecetasIngredientesController.getIngredienteName(request: Request, ingredienteName: String)
+
+#------------------------------------#
+#       METODOS POST INGREDIENTES    #
+#------------------------------------#
+
+# ------ POST CREAR INGREDIENTE          ------
+
+POST    /ingredientes   controllers.RecetasIngredientesController.createIngrediente(request: Request)
+
+#------------------------------------#
+#       METODOS PUT INGREDIENTES     #
+#------------------------------------#
+
+# ------ PUT ACTUALIZAR INGREDIENTE      ------
+
+PUT     /ingrediente/:ingredienteId    controllers.RecetasIngredientesController.updateIngrediente(request: Request, ingredienteId: Long)
+
+#------------------------------------#
+#     METODOS DELETE INGREDIENTES    #
+#------------------------------------#
+
+# ------ DELETE ELIMINAR INGREDIENTE     ------
+
+DELETE     /ingrediente/:ingredienteId    controllers.RecetasIngredientesController.deleteIngrediente(ingredienteId: Long)
+
+#============================================================
+#============================================================
+
+#------------------------------------#
+#            APARTADO 3              #
+#       GESTION DE LOS COMENTARIOS   #
+#------------------------------------#
+
+# ------ GET COMENTARIOs                ------
+
+GET     /comentarios                   controllers.RecetasIngredientesController.getComentarios(request: Request)
+
+
+# ------ GET COMENTARIO POR NOMBRE      ------
+
+GET     /comentario/text/:comentarioText  controllers.RecetasIngredientesController.getComentarioText(request: Request, comentarioText: String)
+
+
+#============================================================
+#============================================================
+
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+
+#============================================================
+#============================================================
+

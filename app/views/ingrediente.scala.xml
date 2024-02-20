@@ -1,0 +1,8 @@
+@(id: Long, name: String)
+
+        <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+
+<ingrediente>
+    <id>@id</id>
+    <name>@name</name>
+</ingrediente>

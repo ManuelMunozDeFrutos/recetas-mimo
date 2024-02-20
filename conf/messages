@@ -1,0 +1,31 @@
+recipe_not_found = Recipe not found
+recipes_not_found = No Recipes
+recipes_category_not_found = Recipes with that category Not Found
+recipes_name_not_found = Recipes with that Name Not Found
+
+ingredientes_not_found = No Ingredients
+ingrediente_not_found = Ingredient Not Found
+
+commentaries_not_found = No Commentaries
+commentary_not_found = Commentary not found
+
+
+recipe_name_required = Recipe Name required
+recipe_name_min = Recipe Name length must be greater than 2 characters
+recipe_name_max = Recipe Name length must be lower than 50 characters
+recipe_description_required = Recipe Description Required
+recipe_description_min = Recipe Description length must be greater than 2 characters
+recipe_description_max = Recipe Description length must be lower than 100 characters
+recipe_category_required = Recipe Category must be PRIMERO SEGUNDO or POSTRE
+recipe_dificulty_required = Recipe Dificulty must be ALTA MEDIA or BAJA
+recipe_commentary_required = Recipe Commentary required
+recipe_ingredients_required = Recipe Ingredients Required
+
+commentary_text_required = Commentary Text Required
+commentary_text_min = Commentary Text length must be greater than 2 characters
+commentary_text_max = Commentary Text length must be lower than 50 characters
+
+ingredient_name_required = Ingredient Name Required
+ingredient_name_min = Ingredient Name length must be greater than 2 characters
+ingredient_name_max = Ingredient Name length must be lower than 20 characters
+
