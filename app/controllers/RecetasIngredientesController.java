@@ -114,6 +114,9 @@ public class RecetasIngredientesController extends Controller
 
     //Para actualizar indispensable pasarle el ID
     //Prueba de cambio git
+
+    //Para guardar todos los cambios
+    //git commit -a -m "mensaje"
     */
 
     // --- Factoria para formularios ---
