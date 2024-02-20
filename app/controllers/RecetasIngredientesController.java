@@ -113,7 +113,7 @@ public class RecetasIngredientesController extends Controller
     }
 
     //Para actualizar indispensable pasarle el ID
-    
+    //Prueba de cambio git
     */
 
     // --- Factoria para formularios ---
