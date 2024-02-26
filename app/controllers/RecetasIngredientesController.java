@@ -117,6 +117,7 @@ public class RecetasIngredientesController extends Controller
     //---------------------------------
     //Para guardar todos los cambios
     //git commit -a -m "mensaje"
+    //git push origin master
     //---------------------------------
 
     */
