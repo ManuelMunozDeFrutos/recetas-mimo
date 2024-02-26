@@ -116,8 +116,8 @@ public class RecetasIngredientesController extends Controller
 
     //---------------------------------
     //Para guardar todos los cambios
-    //git commit -a -m "mensaje"
-    //git push origin master
+    //git commit -a -m "mensaje"    //Se puede hacer desde IntelliJ
+    //git push origin master        //Se hace desde terminal
     //---------------------------------
 
     */
