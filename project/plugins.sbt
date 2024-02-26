@@ -12,3 +12,5 @@ ThisBuild / libraryDependencySchemes ++= Seq(
 )
 
 addSbtPlugin("com.typesafe.play" % "sbt-play-ebean" % "7.0.0")
+
+addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "0.15.0")

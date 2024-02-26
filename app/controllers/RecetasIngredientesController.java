@@ -122,6 +122,11 @@ public class RecetasIngredientesController extends Controller
 
     */
 
+    public Result index() {
+
+        return ok("Recetas MIMO - MANUEL MUNOZ DE FRUTOS");
+    }
+
     // --- Factoria para formularios ---
 
     @Inject
