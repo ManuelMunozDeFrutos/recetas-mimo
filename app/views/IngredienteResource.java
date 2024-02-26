@@ -20,12 +20,6 @@ public class IngredienteResource
     @Constraints.MaxLength(value = 20, message = "ingredient_name_max")
     private String nameIngrediente;
 
-    //@Constraints.Required(message = "La descripcion del Ingrediente es Obligatoria")
-    //private String descripcion;
-
-    //@Constraints.Required(message = "El tipo del Ingrediente es Obligatorio")
-    //private String tipo;
-
     //============================================================
     //Definimos consturctor de Modelo a Recurso
 
@@ -35,8 +29,7 @@ public class IngredienteResource
 
         this.id = ingredienteModel.getId();
         this.nameIngrediente = ingredienteModel.getNameIngrediente();
-        //this.descripcion = ingredienteModel.getDescripcion();
-        //this.tipo = ingredienteModel.getTipo();
+
     }
 
     public IngredienteResource() {
@@ -60,24 +53,6 @@ public class IngredienteResource
         this.nameIngrediente = nameIngrediente;
     }
 
-    /*
-    public String getDescripcion() {
-
-        return descripcion;
-    }
-
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
-    }
-
-    public String getTipo() {
-        return tipo;
-    }
-
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
-    }
-    */
     //============================================================
 
     public JsonNode toJson()
@@ -93,8 +68,6 @@ public class IngredienteResource
 
         ingredienteModel.setId(this.id);
         ingredienteModel.setNameIngrediente(this.nameIngrediente);
-        //ingredienteModel.setDescripcion(this.descripcion);
-        //ingredienteModel.setTipo(this.tipo);
 
         return ingredienteModel;
     }

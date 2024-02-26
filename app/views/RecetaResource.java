@@ -47,6 +47,8 @@ public class RecetaResource
     @Constraints.Required(message = "recipe_commentary_required")
     private List<String> comentario = new ArrayList<>();
 
+    //Relacion N -M
+
     @Constraints.Required(message = "recipe_ingredients_required")
     private List<String> ingredientesNames = new ArrayList<>();
 
@@ -145,6 +147,8 @@ public class RecetaResource
     }
 
     //============================================================
+
+    //Lo convertimos a modelo
 
     public RecetaModel toModel()
     {

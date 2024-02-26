@@ -62,8 +62,9 @@ public class ComentarioModel extends Model
     {
 
         return finder.byId(id);
-
     }
+
+    //------------------
 
     public static ComentarioModel findComentarioPorName(String textoComentario)
     {

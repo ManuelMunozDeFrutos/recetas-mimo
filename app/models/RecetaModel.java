@@ -27,7 +27,7 @@ public class RecetaModel extends Model
     @OneToOne(cascade = CascadeType.ALL) //Si se borra la receta tambien se borra la descripcion
     private DescripcionModel descripcion;
 
-    //1-N
+    //1-N Relacion
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "receta")
     private List<ComentarioModel> comentarios = new ArrayList<>();
 
@@ -188,6 +188,9 @@ public class RecetaModel extends Model
         this.ingredientes = ingredientes;
     }
 
+    //============================================================
+    //Para añadir el ingrediente a la bd
+
     public void addIngrediente(String ingredienteName) {
         IngredienteModel ing = IngredienteModel.findIngredienteByName(ingredienteName);
 
@@ -199,4 +202,6 @@ public class RecetaModel extends Model
         ing.getRecetas().add(this);
         this.ingredientes.add(ing);
     }
+
+    //============================================================
 }
