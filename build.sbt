@@ -11,8 +11,7 @@ libraryDependencies += guice
 
 libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.4.5"
 
-libraryDependencies += "org.slf4j" % "slf4j-simple" % "1.7.32"
-
+libraryDependencies += "org.slf4j" % "slf4j-jdk14" % "1.7.32" exclude("org.slf4j", "slf4j-log4j12")
 
 enablePlugins(PlayEbean)
 libraryDependencies += evolutions
@@ -27,6 +26,7 @@ assemblyJarName in assembly := "recetas-mimo-fat-jar-assembly.jar"
 import sbtassembly.AssemblyPlugin.autoImport._
 
 assemblyMergeStrategy in assembly := {
+  case PathList("META-INF", x, xs @ _*) if x.toLowerCase == "services" => MergeStrategy.filterDistinctLines
   case PathList("META-INF", xs @ _*) => MergeStrategy.discard
   case x => MergeStrategy.first
 }
