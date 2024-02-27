@@ -11,6 +11,8 @@ libraryDependencies += guice
 
 libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.4.5"
 
+libraryDependencies += "org.slf4j" % "slf4j-simple" % "1.7.32"
+
 
 enablePlugins(PlayEbean)
 libraryDependencies += evolutions
