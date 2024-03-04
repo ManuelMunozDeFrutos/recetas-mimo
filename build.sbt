@@ -13,7 +13,7 @@ libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.4.5"
 
 libraryDependencies += "org.slf4j" % "slf4j-jdk14" % "1.7.32" exclude("org.slf4j", "slf4j-log4j12")
 
-libraryDependencies += "org.postgresql" % "postgresql" % "42.1.4"
+libraryDependencies += "org.postgresql" % "postgresql" % "42.7.2"
 
 enablePlugins(PlayEbean)
 libraryDependencies += evolutions
