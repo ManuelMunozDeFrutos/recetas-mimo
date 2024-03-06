@@ -43,7 +43,9 @@ public class RecetasIngredientesController extends Controller
 
     /*
 
-    PRUEBAS DE FUNCIONAMIENTO
+    //#============================================================#
+    //Recetas para añadir a modo de ejemplo
+    //#============================================================#
 
     {
         "name": "Arroz con pollo",
@@ -61,6 +63,8 @@ public class RecetasIngredientesController extends Controller
             "Agua"
         ]
     }
+
+    //#============================================================#
 
     {
         "name": "Guiso de Patatas con Zanahorias y carne",
@@ -80,6 +84,8 @@ public class RecetasIngredientesController extends Controller
         ]
     }
 
+    //#============================================================#
+
     {
         "name": "Pescado al horno",
         "categoria": "SEGUNDO",
@@ -94,6 +100,8 @@ public class RecetasIngredientesController extends Controller
             "Patata"
         ]
     }
+
+    //#============================================================#
 
     {
         "name": "Flan de Huevo",
@@ -112,15 +120,24 @@ public class RecetasIngredientesController extends Controller
         ]
     }
 
-    //Para actualizar indispensable pasarle el ID
+    //#============================================================#
+
+    //Para actualizar - indispensable pasarle el ID en la url
+
+    //#============================================================#
 
     //---------------------------------
     //Para guardar todos los cambios
     //git commit -a -m "mensaje"    //Se puede hacer desde IntelliJ
     //git push origin master        //Se hace desde terminal
+
+    //El codigo estará disponible en
+    //  https://github.com/ManuelMunozDeFrutos/recetas-mimo
     //---------------------------------
 
     */
+
+    //#============================================================#
 
     // --- Factoria para formularios ---
 
@@ -148,6 +165,11 @@ public class RecetasIngredientesController extends Controller
     //#--------------------------------#
 
     //# ------ GET RECETAS                ------
+
+    //localhost:9000/recetas
+
+    //Se obtienen en json o xml todas las recetas que haya introducidas
+    //Se obtienen todos los datos relativos a dicha receta
 
     public Result getRecetas(Http.Request request)
     {
@@ -244,6 +266,10 @@ public class RecetasIngredientesController extends Controller
     }
 
     //# ------ GET RECETA POR ID          ------
+
+    //localhost:9000/receta/{id}
+
+    //Se obtiene en json o xml todos los datos de la receta cuyo id se pase como parametro
 
     public Result getRecetaId(Http.Request request, Long recetaId)
     {
@@ -344,6 +370,11 @@ public class RecetasIngredientesController extends Controller
     }
 
     //# ------ GET RECETA POR CATEGORIA      ------
+
+    //localhost:9000/receta/category/{CATEGORIA}
+
+    //Se obtiene un listado en json o xml de todos los datos de las recetas pertenecientes
+    //a dicha categoria pasada como parametro.
 
     public Result getRecetaCategory(Http.Request request, String recetaCategory)
     {
@@ -457,6 +488,12 @@ public class RecetasIngredientesController extends Controller
     }
 
     //# ------ GET RECETA POR NOMBRE   ------
+
+    //localhost:9000/receta/name/{nombre}
+
+    // se obtendrán los datos de las recetas pasandole como parametro el nombre que queramos buscar
+
+    //no neceariamente tiene que ser igual, puede estar incluido en el nombre
 
     public Result getRecetaName(Http.Request request, String recetaName)
     {
@@ -577,6 +614,14 @@ public class RecetasIngredientesController extends Controller
 
     //# ------ POST CREAR RECETA          ------
 
+    //localhost:9000/recetas
+
+    // para incluir una receta, habrá que pasarle todos los datos completos que queramos.
+
+    // contiene validacion de los datos, por lo que se debe estar atento a la forma de escribirlo en el POST
+
+
+
     public Result createReceta(Http.Request request)
     {
         System.out.println(" ");
@@ -641,6 +686,13 @@ public class RecetasIngredientesController extends Controller
 
     //# ------ PUT ACTUALIZAR RECETA      ------
 
+    //localhost:9000/receta/{id}
+
+    //Para actualizar los datos de las recetas que queramos.
+
+    //No solo actualiza los datos de la propia receta, tambien sus campos externos
+    //(ingredientes, comentarios o descripcion)
+
     public Result updateReceta(Http.Request request, Long recetaId)
     {
         {
@@ -700,6 +752,10 @@ public class RecetasIngredientesController extends Controller
 
     //# ------ DELETE ELIMINAR RECETA     ------
 
+    //localhost:9000/receta/{id}
+
+    //Elimina la receta y desasocia sus valores de tablas externas
+
     public Result deleteReceta(Long recetaId)
     {
         System.out.println(" ");
@@ -732,6 +788,10 @@ public class RecetasIngredientesController extends Controller
     //#------------------------------------#
 
     //# ------ GET INGREDIENTES                ------
+
+    //localhost:9000/ingredientes
+
+    //Metodo para obtener un listado con todos los ingredientes que existan en la base de datos
 
     public Result getIngredientes(Http.Request request)
     {
@@ -819,6 +879,11 @@ public class RecetasIngredientesController extends Controller
 
     //# ------ GET INGREDIENTE POR ID          ------
 
+    //localhost:9000/ingrediente/{id}
+
+    //metodo para obtener el ingrediente por su id
+
+
     public Result getIngredienteID(Http.Request request, Long ingredienteId)
     {
         System.out.println(" ");
@@ -905,6 +970,11 @@ public class RecetasIngredientesController extends Controller
     }
 
     //# ------ GET INGREDIENTE POR NOMBRE      ------
+
+    //localhost:9000/ingrediente/name/{nombre}
+
+    //Metodo para obtener los datos de un ingrediente por nombre en el caso de que se quiera comprobar
+    //que existe dentro de la bd
 
     public Result getIngredienteName(Http.Request request, String ingredienteName)
     {
@@ -996,6 +1066,17 @@ public class RecetasIngredientesController extends Controller
 
     //# ------ POST CREAR INGREDIENTE          ------
 
+    //en caso de que se quiera crear un ingrediente sin asociar a una receta
+
+    //localhost:9000/ingredientes
+
+    //Metodo que no se suele utilizar porque los ingredientes quedan desvinculados de la receta.
+
+    //Sirve para incluir un ingrediente dentro de la bd
+    //Hay comprobacion de repeticion, por lo que si el ingrediente que se quiere incluir ya existe, se omite.
+
+    //Este metodo no se suele hacer porque el POST de las recetas ya lo hace.
+
     public Result createIngrediente(Http.Request request)
     {
         System.out.println(" ");
@@ -1053,6 +1134,13 @@ public class RecetasIngredientesController extends Controller
     //#------------------------------------#
 
     //# ------ PUT ACTUALIZAR INGREDIENTE      ------
+
+    //localhost:9000/ingrediente/{id}
+
+    //Metodo que no se ha utilizado mucho porque el PUT de las recetas general ya lo hace
+
+    //Sirve para modificar un ingrediente pasado por ID
+
 
     public Result updateIngrediente(Http.Request request, Long ingredienteId)
     {
@@ -1114,6 +1202,10 @@ public class RecetasIngredientesController extends Controller
 
     //# ------ DELETE ELIMINAR INGREDIENTE     ------
 
+    //localhost:9000/ingrediente/{id}
+
+    //metodo que elimina un ingrediente concreto, desvinculandolo de las recetas en las que aparezca
+
     public Result deleteIngrediente(Long ingredienteId)
     {
         System.out.println(" ");
@@ -1142,6 +1234,11 @@ public class RecetasIngredientesController extends Controller
         //#------------------------------------#
 
     //# ------ GET COMENTARIOs                ------
+
+    //localhost:9000/comentarios
+
+    //Metodo para obtener todos los comenatrios de la BD
+
 
     public Result getComentarios(Http.Request request)
     {
@@ -1226,6 +1323,10 @@ public class RecetasIngredientesController extends Controller
     }
 
     //# ------ GET COMENTARIO POR TEXTO      ------
+
+    //localhost:9000/comentario/text/{texto}
+
+    //Metodo para obtener los cometarios completos que lleven una palabra concreta en el texto
 
     public Result getComentarioText(Http.Request request, String comentarioName)
     {
